@@ -103,7 +103,7 @@ html,body,.wrapper{
 .item:nth-of-type(9) .bg{
     background-image: url(../images/9.jpg);
 }
-// url 后面可以是图床的链接，也可以使../images/7.jpg  本地链接
+
 .item .title{
     position: absolute;
     top: 50%;
