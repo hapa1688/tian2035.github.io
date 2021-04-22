@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>天添出生纪念tian2035.com</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="2css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="2js/jquery.js"></script>
+	<script type="text/javascript" src="2js/garden.js"></script>
+    <script type="text/javascript" src="2js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="keyword">我是天添：</span><br />
+
+				<span class="space"/>我在不断长大</span><br />
+				<span class="space"/>哭着、笑着 </span><br />
+				<span class="space"/>有委屈，有开心，还有压力</span><br />
+				<span class="space"/>但这都没什么</span><br />
+				<span class="space"/>我有梦想，怕什么</span><br />
+				<span class="space"/></span><br />
+				<span class="space"/><span class="keyword">爸爸说：<br />
+				<span class="space"/><span class="keyword">于一城成长<br />
+				<span class="space"/><span class="keyword">在一城立志<br />
+				<span class="space"/><span class="keyword">择一城奋斗<br />
+				<span class="space"/><span class="keyword">干一行挚守</span> <br />
+				<span class="space"/></span><br />
+				<span class="space"/>我走自己的路！<br />
+				<span class="space"/>- tian2035<br />
+
+				<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						我已出生：
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						珍惜这每一分每一秒.<br/>
+						<div class="signature">- tian2035</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2017, 11, 26);
+		together.setHours(9);
+		together.setMinutes(18);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
